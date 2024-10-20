@@ -3,6 +3,7 @@ import search_icon from "../assets/search.png";
 import humidity_icon from "../assets/humidity.png";
 import wind_icon from "../assets/wind.png";
 import { useEffect, useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 const Weather = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -114,7 +115,9 @@ const Weather = () => {
       ) : (
         <p>Loading...</p>
       )}
+      <Analytics/>
     </div>
+    
   );
 };
 
